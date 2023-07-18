@@ -14,17 +14,8 @@
  */
 int _islower(int c)
 {
-	int i = 97;
-
-	while (i <= 122)
-	{
-		if (c == i)
-		{
-			return (1);
-		}
-
-		i++;
-	}
-
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }
