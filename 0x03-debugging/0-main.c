@@ -1,8 +1,3 @@
-/*
- * File: 0-main.c
- * Auth: Badreddine Toumani
- */
-
 #include "main.h"
 
 /**
