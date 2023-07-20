@@ -23,18 +23,21 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
-		else if ((i % 10) == 0 || (i % 10) == 5)
-		{
-			printf("Buzz");
-		}
 		else if ((i % 3) == 0)
 		{
 			printf("Fizz");
+		}
+		else if ((i % 5) == 0)
+		{
+			printf("Buzz");
 		}
 		else
 		{
 			printf("%d", i);
 		}
+
+		if (i == 100)
+			continue;
 
 		putchar(' ');
 	}
