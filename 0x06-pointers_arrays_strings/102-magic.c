@@ -1,4 +1,10 @@
 #include <stdio.h>
+
+/**
+ * main - changes of the value of a[2].
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 	int n;
