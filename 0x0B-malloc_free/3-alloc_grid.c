@@ -6,17 +6,18 @@
  * @width: The width of the array.
  * @height: The height of the array.
  *
- * Return: NULL if @width or @height is 0 or negative,
- * or on the failure. Otherwise a pointer to a 2D array of integers.
+ * Return: NULL if @width or @height is 0 or negative, or the function fails.
+ * Otherwise a pointer to a 2D array of integers.
  */
 int **alloc_grid(int width, int height)
 {
 	int i, j;
+	int **grid;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	int **grid = (int **) malloc(height * sizeof(int *));
+	grid = (int **) malloc(height * sizeof(int *));
 
 	if (grid == NULL)
 		return (NULL);
@@ -26,7 +27,17 @@ int **alloc_grid(int width, int height)
 		grid[i] = (int *) malloc(width * sizeof(int));
 
 		if (grid[i] == NULL)
+		{
+
+			for (int j = 0; j < i; j++)
+			{
+				free(grid[i]);
+			}
+
+			free(grid);
+
 			return (NULL);
+		}
 
 		for (j = 0; j < width; j++)
 		{
