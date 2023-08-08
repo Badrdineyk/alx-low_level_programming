@@ -13,7 +13,6 @@
 char *argstostr(int ac, char **av)
 {
 	int total_len = 0;
-	int lengths_args[ac];
 	int i, j;
 	int curr_index = 0;
 	char *conc_args;
@@ -28,7 +27,6 @@ char *argstostr(int ac, char **av)
 		while (av[i][arg_len] != '\0')
 			arg_len++;
 
-		lengths_args[i] = arg_len;
 		total_len += arg_len + 1;
 	}
 
@@ -39,7 +37,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < lengths_args[i]; j++)
+		for (j = 0; j < av[i][j]; j++)
 		{
 			conc_args[curr_index] = av[i][j];
 			curr_index++;
