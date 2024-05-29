@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines an island perimeter measuring function."""
 
+
 def island_perimeter(grid):
     """Returns the perimeter of the island described in grid.
 
@@ -11,7 +12,6 @@ def island_perimeter(grid):
     Returns:
         the perimeter of the island described in grid.
     """
-
     h = len(grid)
     w = len(grid[0])
     s = 0
